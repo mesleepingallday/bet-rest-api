@@ -1,8 +1,10 @@
 import { Elysia } from "elysia";
+import { cors } from "@elysiajs/cors";
 
-const links = Bun.file("./temp.txt", { type: "application/json" });
+const port = process.env.PORT || 5432;
 
 const app = new Elysia()
+  .use(cors())
   .state("version", "1.0.0")
   .get("/links", () => {
     return links;
@@ -12,8 +14,6 @@ const app = new Elysia()
     await Bun.write("./temp.txt", data);
     return { message: "File updated successfully" };
   })
-  .listen(3000);
+  .listen(port, () => console.log(`Server is running on port ${port}`));
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+export default app;
