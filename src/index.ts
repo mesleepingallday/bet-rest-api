@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 
-const port = process.env.PORT || 5432;
+const port = process.env.PORT ?? 5432;
 const links = Bun.file("./temp.txt", { type: "application/json" });
 
 const app = new Elysia()
