@@ -1,5 +1,3 @@
-<div>
-  <strong>THÔNG TIN THÊMmmm:</strong>
   <ul>
     <li><a href="https://cashboom.io/">hit club</a></li>
     <li><a href="https://napthe3s.com/">b52 club</a></li>
@@ -10,4 +8,4 @@
     <li><a href="https://antrinano.com/">https://antrinano.com</a></li>
     <li><a href="https://showmethegolf.com/">shbet</a></li>
   </ul>
-</div>
+
